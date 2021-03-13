@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-<title>axios demo</title>
+<title>查询快递</title>
 <body>
-<h2>axios demo</h2>
+<h2>快递查询</h2>
+<div id = "app">
+<input type = "text" v-model= "number" @keyup.enter="getWeather">
+<input type = "button" value = "Search Express" @click="getWeather">
+<br>
+<p>
+<img :src = "logo">
+<br>
+{{expName}}
+<br>
+{{timeTake}}
+<hr>
+<div v-for = "item in status">
+{{item.status}} {{item.time}}
 
-<input type = "button" value = "get permission" class = "get">
-<input type = "button" value = "get permission" class = "post">
-
+<hr>
+</div>
+</p>
+<!--<input type = "button" value = "get permission" class = "post">-->
+</div>
 
 </body>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src = "main.js"></script>
+<!--73149740828207-->
 </html>
